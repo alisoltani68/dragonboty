@@ -20,7 +20,7 @@ function on_msg_receive (msg)
   if msg_valid(msg) then
     msg = pre_process_msg(msg)
     if msg then
-      match_plugins(msg)
+      match_plugins(msg)ه
       if redis:get("bot:markread") then
         if redis:get("bot:markread") == "on" then
           mark_read(receiver, ok_cb, false)
@@ -239,16 +239,16 @@ function create_config( )
     "time",
     "welcome"
     },
-    sudo_users = {122774063},--Sudo users
+    sudo_users = {324629145},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Sbss Bot V2 Beta
     An Advanced Anti Spam Bot Forked On TeleSeed
     
     Develpoed By:
-    @Mr_Ah_S
+    @KingInfernal
     Manager:
-    @amiirdada
+    @KingInfernal
     Founder:
     @AmirQuick
     
@@ -339,7 +339,7 @@ __________________________
 —---------------------—
 نیاز نیست از '!' و '/' استفاده کنید*
 _______________________________
-Writed by SBSS Team
+Writed by SBSS & king infrenal  Team
 ]]
   }
   serialize_to_file(config, './data/config.lua')
